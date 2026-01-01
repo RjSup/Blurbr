@@ -1,0 +1,83 @@
+# =========================
+# Xcode
+# =========================
+
+# Build results
+DerivedData/
+build/
+
+# User-specific files
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+
+# Xcode workspace settings
+*.xccheckout
+*.xcscmblueprint
+
+# =========================
+# Swift Package Manager
+# =========================
+
+.build/
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.swiftpm/xcode/package.xcworkspace/xcuserdata/
+
+# =========================
+# CocoaPods
+# =========================
+
+Pods/
+Podfile.lock
+
+# =========================
+# Carthage
+# =========================
+
+Carthage/Build/
+
+# =========================
+# Fastlane
+# =========================
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# =========================
+# Code Injection
+# =========================
+
+iOSInjectionProject/
+
+# =========================
+# Playgrounds
+# =========================
+
+timeline.xctimeline
+playground.xcworkspace
+
+# =========================
+# Logs & temp files
+# =========================
+
+*.log
+*.tmp
+*.swp
+
+# =========================
+# Environment & secrets
+# =========================
+
+.env
+*.secret
+*.key
+
+# =========================
+# macOS
+# =========================
+
+.DS_Store
