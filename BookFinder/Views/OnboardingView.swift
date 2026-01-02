@@ -15,6 +15,8 @@ struct Onboarding: View {
     
     var body: some View {
         TabView {
+            // welcome
+            OnboardingViewSteps(title: "Welcome to Blurbr", description: "Discover what to read next.")
             // take genre data here
             OnboardingViewSteps(title: "Choose Genre", description: "Now choose your genre")
             // take length here
@@ -31,7 +33,11 @@ struct Onboarding: View {
                 alignment: .bottom
             )
         }
-        .tabViewStyle(PageTabViewStyle())
+        // styling tab per index
+        .tabViewStyle(.page(indexDisplayMode: .always))
+        // making each index a dot
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        
     }
 }
 
@@ -48,3 +54,6 @@ struct OnboardingViewSteps: View {
     }
 }
 
+#Preview {
+    Onboarding(isComplete: .constant(false))
+}

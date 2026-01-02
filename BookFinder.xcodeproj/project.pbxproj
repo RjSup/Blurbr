@@ -11,8 +11,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9427B6BA2F06BE8C00CA4824 /* BookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = BookFinder.app; path = "/Users/Ryan/Documents/bookshelf/BookFinder/build/Debug-iphoneos/BookFinder.app"; sourceTree = "<absolute>"; };
 		9427B6D82F06E97300CA4824 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		94284C072F08285D002C929E /* BookFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -39,6 +39,7 @@
 			children = (
 				9427B6BC2F06BE8C00CA4824 /* BookFinder */,
 				9427B6D82F06E97300CA4824 /* .gitignore */,
+				94284C072F08285D002C929E /* BookFinder.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +65,7 @@
 			packageProductDependencies = (
 			);
 			productName = BookFinder;
-			productReference = 9427B6BA2F06BE8C00CA4824 /* BookFinder.app */;
+			productReference = 94284C072F08285D002C929E /* BookFinder.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

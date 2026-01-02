@@ -61,4 +61,7 @@ struct Cards: View {
     }
 }
 
-
+#Preview {
+    let sample = Book(title: "Sample Title", authors: "Sample Author", description: "Fiction", genre: "This is a sample description used for previewing the card view.")
+    Cards(book: sample, onRemove: {})
+}
