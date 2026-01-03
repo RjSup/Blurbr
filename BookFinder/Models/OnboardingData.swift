@@ -13,4 +13,10 @@ struct OnboardingData {
     var genres: [String] = []
     var mood: [String] = []
     var authors: [String] = []
+    var bookLength: BookLength? = nil
+}
+
+enum BookLength: String, CaseIterable {
+    case short = "Short"
+    case long = "Long"
 }

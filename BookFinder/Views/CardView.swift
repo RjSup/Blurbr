@@ -10,6 +10,8 @@ import SwiftUI
 struct Cards: View {
     let book: Book
     let onRemove: () -> Void
+    let onLike: () -> Void
+    let onDislike: () -> Void
     
     @State private var offset: CGSize = .zero
     @State private var isFlipped: Bool = false
@@ -47,21 +49,35 @@ struct Cards: View {
                     offset = gesture.translation
                 }
                 .onEnded { _ in
-                    if abs(offset.width) > 120 {
-                        onRemove()
-                    } else {
-                        offset = .zero
-                    }
+                    handleSwipe()
                 }
             )
             .animation(.spring(), value: offset)
             .onTapGesture {
-                isFlipped = true
+                isFlipped.toggle()
             }
+    }
+    
+    private func handleSwipe() {
+        let threshold: CGFloat = 120
+        
+        if offset.width > threshold {
+            onLike()
+        }
+        else if offset.width < -threshold {
+            onDislike()
+        } else {
+            offset = .zero
+        }
     }
 }
 
 #Preview {
-    let sample = Book(title: "Sample Title", authors: "Sample Author", description: "Fiction", genre: "This is a sample description used for previewing the card view.")
-    Cards(book: sample, onRemove: {})
+    let sample = Book(title: "Sample Title", authors: "Sample Author", description: "This is a sample description used for previewing the card view.", genre: "Fiction")
+    return Cards(
+        book: sample,
+        onRemove: {},
+        onLike: {},
+        onDislike: {}
+    )
 }

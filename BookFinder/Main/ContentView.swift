@@ -25,9 +25,12 @@ struct ContentView: View {
         VStack {
             ZStack {
                 ForEach(books) { book in
-                    Cards(book: book) {
-                        remove(book)
-                    }
+                    Cards(
+                        book: book,
+                        onRemove: { remove(book) },
+                        onLike: { like() },
+                        onDislike: { dislike() },
+                    )
                 }
             }
             .padding(25)

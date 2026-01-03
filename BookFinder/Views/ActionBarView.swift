@@ -32,7 +32,7 @@ struct ActionBarView: View {
                     .foregroundColor(.green)
             }
         }
-        .frame(width: 350)
+        .frame(width: 400)
         .padding()
         .background(.ultraThinMaterial)
     }
